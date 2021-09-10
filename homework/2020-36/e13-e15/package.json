@@ -1,8 +1,8 @@
 {
-  "name": "e01-e10",
+  "name": "e13-e15",
   "version": "1.0.0",
   "description": "",
-  "main": "e01.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML5 Page</title>
+  </head>
+  <body>
+    <script>
+      console.log(this);
+      console.log(this == window);
+
+      this.key1 = "donald duck"; //key1 on globaali muuttuja ja arvoksi tulee donald duck. Näkyy alla olevassa tulosteessa
+      window.key2 = "mickey mouse"; //key2 on globaali muuttuja ja arvoksi tulee mickey mouse. Näkyy tulosteessa
+      var key3 = "uncle scrooge"; //alustaa globaalin muuttujan key3 arvoksi uncle scrooge. Näkyy myös tulosteessa
+
+      for (const x in window) {
+        document.write(`key = ${x} <br> value = ${window[x]} <br>`);
+      }
+    </script>
+  </body>
+</html>
+
+<!--
+  tulee <unavailable> ja osoittaa console.log(this) kohtaan rivillä 9
+  koska se on tyhjä ja ei viittaa mihinkään olioon
+  console.log(this == window) arvoksi tulee true rivillä 10, koska
+  this on sama asia windowin kanssa
+-->

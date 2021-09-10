@@ -4,10 +4,12 @@
   "type": "module",
   "description": "",
   "main": "e11.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
 }
