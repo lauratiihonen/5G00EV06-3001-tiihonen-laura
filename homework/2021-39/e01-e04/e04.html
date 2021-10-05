@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+
+    <meta charset="UTF-8" />
+    <style media="screen"></style>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      let array = [];
+
+      function List(properties) {
+        for (let i = 0; i < properties.amount; i++) {
+          array.push(<li key={i}>{properties.txt}</li>);
+        }
+        if (properties.ordered == true) {
+          return <ol>{array}</ol>;
+        } else {
+          return <ul>{array}</ul>;
+        }
+      }
+
+      ReactDOM.render(
+        <List amount={4} ordered={false} txt="Buy Milk" />,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>

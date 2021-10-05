@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+
+    <meta charset="UTF-8" />
+    <style media="screen"></style>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      /*
+        class Random extends React.Component {
+          generateRandomNumber() {
+            //alert("Hello");
+            console.log(this);
+          }
+          render() {
+            return (
+              <button onClick={() => this.generateRandomNumber()}>
+                Generate Random
+              </button>
+            );
+          }
+        }*/
+
+      class Random extends React.Component {
+        constructor(props) {
+          super(props); // this.props = props
+          this.generateRandomNumber = function () {
+            console.log();
+          };
+        }
+        render() {
+          return (
+            <button onClick={this.generateRandomNumber}>Generate Random</button>
+          );
+        }
+      }
+
+      ReactDOM.render(<Random />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
